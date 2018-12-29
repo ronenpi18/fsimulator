@@ -1,6 +1,7 @@
 //
 // created
-//#ifndef PROG1PROJECT_ENVIROMENT_H
+//
+#ifndef PROG1PROJECT_ENVIROMENT_H
 #define PROG1PROJECT_ENVIROMENT_H
 
 #include <string>
