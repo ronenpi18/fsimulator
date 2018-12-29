@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="prog1Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/ronen/Downloads/prog1Project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/ronen/Downloads/prog1Project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/ronen/Downloads/prog1Project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="prog1Project">
+				<Option output="/Users/ronen/Downloads/prog1Project/cmake-build-debug/prog1Project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ronen/Downloads/prog1Project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 prog1Project"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="prog1Project/fast">
+				<Option output="/Users/ronen/Downloads/prog1Project/cmake-build-debug/prog1Project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ronen/Downloads/prog1Project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 prog1Project/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ronen/Downloads/prog1Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Command.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/CommandCreator.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/ConditionParser.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/ConditionParser.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/ConnectCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/ConnectCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/Creators.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/DefineVarCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/DefineVarCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/EnterCCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/EqualsCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/EqualsCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/IfCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/IfCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/OpenDataServerCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/OpenDataServerCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/PrintCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/PrintCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/SemicolonCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/SleepCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/SleepCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/WhileCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/WhileCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Enviroment.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Enviroment.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expression.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/BooleanExpressions/Bigger.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/BooleanExpressions/Equals.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/BooleanExpressions/NotEquals.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/BooleanExpressions/Smaller.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/ExpressionFactory.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/ExpressionFactory.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/Expressions_operators/Div.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/Expressions_operators/Minus.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/Expressions_operators/Mul.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/Expressions_operators/Neg.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/Expressions_operators/Plus.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/Expressions_operators/Pow.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/Number.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/UnaryExpression.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expressions/Var.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Interpreter.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Interpreter.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Sockets/FlightDataGetterSetter.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Sockets/FlightDataGetterSetter.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Symbol.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Utils.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Utils.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/main.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

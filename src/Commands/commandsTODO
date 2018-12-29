@@ -1,0 +1,12 @@
+DefineVarCommand
+HasamaCommand
+
+OpenServerCommand
+ConnectCommand
+
+
+ConditionParser- Command - holds list of commands
+    IfCommand
+    LoopCommand
+funcCommand
+
