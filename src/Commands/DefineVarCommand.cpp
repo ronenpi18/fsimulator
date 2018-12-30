@@ -1,18 +1,18 @@
 //
-// created by omri & gal on 12/18/18.
+// created by Chenon 12/18/18.
 //
 
 #include "DefineVarCommand.h"
-#include "../Utils.h"
+#include "../Common/Utils.h"
 #include "../Databases/SymbolsDB.cpp"
-#include "../Databases/ConstsDB.cpp"
+#include "../Databases/Consts.cpp"
 
 void DefineVarCommand::doCommand() {
 
     string varName = args[0];
 
     // if the variable name is not a command/keyword.
-    if (ConstsDB::containsCommand(varName) || ConstsDB::containsKeyword(varName)) {
+    if (Consts::containsCommand(varName) || Consts::containsKeyword(varName)) {
         throw SymbolException("Variable with name of language keyword is not allowed");
     }
     // check that var name is not define.

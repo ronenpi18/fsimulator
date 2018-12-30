@@ -7,7 +7,7 @@
 
 #include <string>
 #include <vector>
-#include "Expression.h"
+#include "../Expression.h"
 
 using namespace std;
 
@@ -33,9 +33,6 @@ public:
 
 
     };
-/**
- * g++ Expressions/*.h Expressions/*.cpp DataBase.cpp DataBase.h Expression.h Expressions.h Utils.h Utils.cpp Expressions/BooleanExpressions/*.h Expressions/Expressions_operators/*.h
 
- */
 
 #endif //PROG1PROJECT_UTILS_H

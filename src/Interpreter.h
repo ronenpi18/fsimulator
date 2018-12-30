@@ -10,57 +10,59 @@
 #include "Expressions.h"
 using namespace std;
 /*
- *  class Interpreter:
- *  constits of few main functionalities:
- *  to lexe from file or command line into strings array
- *  to parse from the string array into the map of variables - commands.
- *  to
+ *  class Interpreter
+ *  gets a line of the code or an empty line in the code
+ *  using the lexer in order to converts the line into array of strings
+ *  using the parser in order to convrts the words from the string array into commands
 */
 
 class Interpreter {
+    // private members and functions
 private:
+    // private members
+    Command* currentCommand;
+    vector<Command*> commandsStack;
+    vector<string> words;
+    vector<string> currentArgs;
+    int myIndex = 0;
+    bool nextLineNeeded;
 
-    Command* _currentCommand;
-    vector<Command*> _commandsStack;
-    vector<string> _tokens;
-    vector<string> _currentArgs;
-    int _index = 0;
-    bool _isNeededMoreLines;
+    // private functions
+    static vector<string> shuntingYard_infixToPostfix(vector<string>& infixExpression);
+    static Expression* shuntingYard_postfixToExpression(vector<string>& postfixExpression);
 
-    // help functions:
-    static vector<string> shuntingYard_infixToPostfix(vector<string>& infix_token);
-
-    static  Expression* shuntingYard_postfixToExpression(vector<string>& exp);
-
-
-    // filter string representing expression into vector of tokens - (numbers, operators and brackets).
-    static vector<string> filterExpressionString(string expression);
+    // public functions
 public:
+    // interpreter constructor
+    // params - an array of all the words in one line of the given code
+    Interpreter(vector<string> line):
+        currentCommand(nullptr), myIndex(0),  words(line), currentArgs(), nextLineNeeded(false) {};
 
-
-    // interpreter constructor, which builds around the code from lexed list, start with index = 0.
-    Interpreter(vector<string> code):
-        _currentCommand(nullptr), _index(0),  _tokens(code), _currentArgs(), _isNeededMoreLines(false) {};
-
-    // interpreter constructor, which build new interpreter ready to lex and parse in this order.
+    // interpreter constructor
+    // no params given
     Interpreter():
-        _currentCommand(nullptr), _index(0),  _tokens(), _currentArgs(), _isNeededMoreLines(false) {};
+        currentCommand(nullptr), myIndex(0),  words(), currentArgs(), nextLineNeeded(false) {};
 
-
-    // lexer - from file, gets the next line of command into string[].
+    // lexer function
+    // params - the next line
+    // split the line into an array of strings
     void lexer(string& line);
 
-    // parser - from a commmandLine representing a command, parse it into command and do it.
+    // parser function
+    // params - no params given
+    // connect all the words to commands according to the map and execute them
     void parser();
 
-    // ‫‪Shunting-yard‬‬ of Dikstra - parse a string into a Expression (only binaries expressions).
-    static Expression* shuntingYard(vector<string>& tokens);
+    // shuntingYard function
+    // params - an array of all the words in the line
+    // according to the shuntingYard algorithm, converts every word into a binary expression
+    static Expression* shuntingYard(vector<string>& words);
 
-    // destructor which also deleting all commands and their important recouses.
-    ~Interpreter();
-
+    // reset function
     void reset();
 
+    // interpreter destructor
+    ~Interpreter();
 };
 
 #endif //PROG1PROJECT_Interpreter_H

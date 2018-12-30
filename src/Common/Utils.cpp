@@ -3,7 +3,7 @@
 //
 
 #include "Utils.h"
-#include "Interpreter.h"
+#include "../Interpreter.h"
 
 // turn string to int.
 double Utils::to_number(string s) {

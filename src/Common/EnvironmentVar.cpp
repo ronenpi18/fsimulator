@@ -1,22 +1,22 @@
 //
 // created
 //
-#include "Enviroment.h"
+#include "EnvironmentVar.h"
 #include <iostream>
 #include "Utils.h"
-#include "Interpreter.h"
-#include "Databases/ConstsDB.h"
+#include "../Interpreter.h"
+#include "../Databases/Consts.h"
 
 
 using namespace std;
 
 
-void Enviroment::CommandlineOperation() {
+void EnvironmentVar::TetminalController() {
 // test parser:
     try {
         Interpreter *i = new Interpreter();
 
-        string line = ConstsDB::ENDLINE_KEYWORD;
+        string line = Consts::ENDLINE_KEYWORD;
         while (line != "exit") {
 
             try {
@@ -46,7 +46,7 @@ void Enviroment::CommandlineOperation() {
 }
 
 
-void Enviroment::runScriptFromFile(std::string &fileName) {
+void EnvironmentVar::fileRunner(std::string &fileName) {
 
     ifstream file(fileName);
     if (file.is_open()) {
@@ -58,7 +58,7 @@ void Enviroment::runScriptFromFile(std::string &fileName) {
                 if (line.length() > 6 && line.substr(0, 3) == "run") {
 
                     string fileName = line.substr(5, line.length() - 6);
-                    runScriptFromFile(fileName);
+                    fileRunner(fileName);
                 }
                 i->lexer(line);
                 i->parser();
@@ -72,7 +72,7 @@ void Enviroment::runScriptFromFile(std::string &fileName) {
         } catch (...){
             cout << "unknown exception was thrown." << endl;
             delete i;
-            ConstsDB::destroyAllDB();
+            Consts::destroyAllDB();
             throw;
 
         }
@@ -82,7 +82,7 @@ void Enviroment::runScriptFromFile(std::string &fileName) {
     }
 }
 
-Enviroment::~Enviroment() {
-    ConstsDB::destroyAllDB();
+EnvironmentVar::~EnvironmentVar() {
+    Consts::destroyAllDB();
 
 }

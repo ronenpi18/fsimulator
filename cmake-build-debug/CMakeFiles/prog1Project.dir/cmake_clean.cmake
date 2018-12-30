@@ -12,8 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/prog1Project.dir/src/Sockets/FlightDataGetterSetter.cpp.o"
   "CMakeFiles/prog1Project.dir/src/main.cpp.o"
   "CMakeFiles/prog1Project.dir/src/Interpreter.cpp.o"
-  "CMakeFiles/prog1Project.dir/src/Utils.cpp.o"
-  "CMakeFiles/prog1Project.dir/src/Enviroment.cpp.o"
+  "CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.o"
+  "CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.o"
   "prog1Project.pdb"
   "prog1Project"
 )

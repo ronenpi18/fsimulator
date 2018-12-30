@@ -366,32 +366,59 @@ src/Commands/WhileCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/WhileCommand.cpp.s
 .PHONY : src/Commands/WhileCommand.cpp.s
 
-src/Enviroment.o: src/Enviroment.cpp.o
+src/Common/EnvironmentVar.o: src/Common/EnvironmentVar.cpp.o
 
-.PHONY : src/Enviroment.o
+.PHONY : src/Common/EnvironmentVar.o
 
 # target to build an object file
-src/Enviroment.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Enviroment.cpp.o
-.PHONY : src/Enviroment.cpp.o
+src/Common/EnvironmentVar.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.o
+.PHONY : src/Common/EnvironmentVar.cpp.o
 
-src/Enviroment.i: src/Enviroment.cpp.i
+src/Common/EnvironmentVar.i: src/Common/EnvironmentVar.cpp.i
 
-.PHONY : src/Enviroment.i
+.PHONY : src/Common/EnvironmentVar.i
 
 # target to preprocess a source file
-src/Enviroment.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Enviroment.cpp.i
-.PHONY : src/Enviroment.cpp.i
+src/Common/EnvironmentVar.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.i
+.PHONY : src/Common/EnvironmentVar.cpp.i
 
-src/Enviroment.s: src/Enviroment.cpp.s
+src/Common/EnvironmentVar.s: src/Common/EnvironmentVar.cpp.s
 
-.PHONY : src/Enviroment.s
+.PHONY : src/Common/EnvironmentVar.s
 
 # target to generate assembly for a file
-src/Enviroment.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Enviroment.cpp.s
-.PHONY : src/Enviroment.cpp.s
+src/Common/EnvironmentVar.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.s
+.PHONY : src/Common/EnvironmentVar.cpp.s
+
+src/Common/Utils.o: src/Common/Utils.cpp.o
+
+.PHONY : src/Common/Utils.o
+
+# target to build an object file
+src/Common/Utils.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.o
+.PHONY : src/Common/Utils.cpp.o
+
+src/Common/Utils.i: src/Common/Utils.cpp.i
+
+.PHONY : src/Common/Utils.i
+
+# target to preprocess a source file
+src/Common/Utils.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.i
+.PHONY : src/Common/Utils.cpp.i
+
+src/Common/Utils.s: src/Common/Utils.cpp.s
+
+.PHONY : src/Common/Utils.s
+
+# target to generate assembly for a file
+src/Common/Utils.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.s
+.PHONY : src/Common/Utils.cpp.s
 
 src/Expressions/ExpressionFactory.o: src/Expressions/ExpressionFactory.cpp.o
 
@@ -474,33 +501,6 @@ src/Sockets/FlightDataGetterSetter.cpp.s:
 	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Sockets/FlightDataGetterSetter.cpp.s
 .PHONY : src/Sockets/FlightDataGetterSetter.cpp.s
 
-src/Utils.o: src/Utils.cpp.o
-
-.PHONY : src/Utils.o
-
-# target to build an object file
-src/Utils.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Utils.cpp.o
-.PHONY : src/Utils.cpp.o
-
-src/Utils.i: src/Utils.cpp.i
-
-.PHONY : src/Utils.i
-
-# target to preprocess a source file
-src/Utils.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Utils.cpp.i
-.PHONY : src/Utils.cpp.i
-
-src/Utils.s: src/Utils.cpp.s
-
-.PHONY : src/Utils.s
-
-# target to generate assembly for a file
-src/Utils.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Utils.cpp.s
-.PHONY : src/Utils.cpp.s
-
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -564,9 +564,12 @@ help:
 	@echo "... src/Commands/WhileCommand.o"
 	@echo "... src/Commands/WhileCommand.i"
 	@echo "... src/Commands/WhileCommand.s"
-	@echo "... src/Enviroment.o"
-	@echo "... src/Enviroment.i"
-	@echo "... src/Enviroment.s"
+	@echo "... src/Common/EnvironmentVar.o"
+	@echo "... src/Common/EnvironmentVar.i"
+	@echo "... src/Common/EnvironmentVar.s"
+	@echo "... src/Common/Utils.o"
+	@echo "... src/Common/Utils.i"
+	@echo "... src/Common/Utils.s"
 	@echo "... src/Expressions/ExpressionFactory.o"
 	@echo "... src/Expressions/ExpressionFactory.i"
 	@echo "... src/Expressions/ExpressionFactory.s"
@@ -576,9 +579,6 @@ help:
 	@echo "... src/Sockets/FlightDataGetterSetter.o"
 	@echo "... src/Sockets/FlightDataGetterSetter.i"
 	@echo "... src/Sockets/FlightDataGetterSetter.s"
-	@echo "... src/Utils.o"
-	@echo "... src/Utils.i"
-	@echo "... src/Utils.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

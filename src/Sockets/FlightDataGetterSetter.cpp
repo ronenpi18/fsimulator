@@ -1,5 +1,5 @@
 //
-// created by omri & gal on 12/22/18.
+// created by Chenon 12/22/18.
 //
 
 #include <strings.h>
@@ -7,8 +7,8 @@
 #include <unistd.h>
 #include <iostream>
 #include "FlightDataGetterSetter.h"
-#include "../Utils.h"
-#include "../Exceptions.h"
+#include "../Common/Utils.h"
+#include "../Common/Exceptions.h"
 
 
 double FlightDataGetterSetter::recieve(string message) {

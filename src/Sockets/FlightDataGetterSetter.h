@@ -1,5 +1,5 @@
 //
-// created by omri & gal on 12/22/18.
+// created by Chenon 12/22/18.
 //
 
 #ifndef PROG1PROJECT_FlightDataGetterSetter_H
@@ -10,9 +10,7 @@
 
 using namespace std;
 
-/**
- * this class is responsible for manaing sockets and sending messages through them.
- */
+
 class FlightDataGetterSetter {
 
 private:

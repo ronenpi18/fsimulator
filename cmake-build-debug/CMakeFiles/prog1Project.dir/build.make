@@ -226,31 +226,31 @@ CMakeFiles/prog1Project.dir/src/Interpreter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog1Project.dir/src/Interpreter.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ronen/Downloads/prog1Project/src/Interpreter.cpp -o CMakeFiles/prog1Project.dir/src/Interpreter.cpp.s
 
-CMakeFiles/prog1Project.dir/src/Utils.cpp.o: CMakeFiles/prog1Project.dir/flags.make
-CMakeFiles/prog1Project.dir/src/Utils.cpp.o: ../src/Utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/prog1Project.dir/src/Utils.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog1Project.dir/src/Utils.cpp.o -c /Users/ronen/Downloads/prog1Project/src/Utils.cpp
+CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.o: CMakeFiles/prog1Project.dir/flags.make
+CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.o: ../src/Common/Utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.o -c /Users/ronen/Downloads/prog1Project/src/Common/Utils.cpp
 
-CMakeFiles/prog1Project.dir/src/Utils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog1Project.dir/src/Utils.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ronen/Downloads/prog1Project/src/Utils.cpp > CMakeFiles/prog1Project.dir/src/Utils.cpp.i
+CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ronen/Downloads/prog1Project/src/Common/Utils.cpp > CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.i
 
-CMakeFiles/prog1Project.dir/src/Utils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog1Project.dir/src/Utils.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ronen/Downloads/prog1Project/src/Utils.cpp -o CMakeFiles/prog1Project.dir/src/Utils.cpp.s
+CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ronen/Downloads/prog1Project/src/Common/Utils.cpp -o CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.s
 
-CMakeFiles/prog1Project.dir/src/Enviroment.cpp.o: CMakeFiles/prog1Project.dir/flags.make
-CMakeFiles/prog1Project.dir/src/Enviroment.cpp.o: ../src/Enviroment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/prog1Project.dir/src/Enviroment.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog1Project.dir/src/Enviroment.cpp.o -c /Users/ronen/Downloads/prog1Project/src/Enviroment.cpp
+CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.o: CMakeFiles/prog1Project.dir/flags.make
+CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.o: ../src/Common/EnvironmentVar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.o -c /Users/ronen/Downloads/prog1Project/src/Common/EnvironmentVar.cpp
 
-CMakeFiles/prog1Project.dir/src/Enviroment.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog1Project.dir/src/Enviroment.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ronen/Downloads/prog1Project/src/Enviroment.cpp > CMakeFiles/prog1Project.dir/src/Enviroment.cpp.i
+CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ronen/Downloads/prog1Project/src/Common/EnvironmentVar.cpp > CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.i
 
-CMakeFiles/prog1Project.dir/src/Enviroment.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog1Project.dir/src/Enviroment.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ronen/Downloads/prog1Project/src/Enviroment.cpp -o CMakeFiles/prog1Project.dir/src/Enviroment.cpp.s
+CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ronen/Downloads/prog1Project/src/Common/EnvironmentVar.cpp -o CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.s
 
 # Object files for target prog1Project
 prog1Project_OBJECTS = \
@@ -267,8 +267,8 @@ prog1Project_OBJECTS = \
 "CMakeFiles/prog1Project.dir/src/Sockets/FlightDataGetterSetter.cpp.o" \
 "CMakeFiles/prog1Project.dir/src/main.cpp.o" \
 "CMakeFiles/prog1Project.dir/src/Interpreter.cpp.o" \
-"CMakeFiles/prog1Project.dir/src/Utils.cpp.o" \
-"CMakeFiles/prog1Project.dir/src/Enviroment.cpp.o"
+"CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.o" \
+"CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.o"
 
 # External object files for target prog1Project
 prog1Project_EXTERNAL_OBJECTS =
@@ -286,8 +286,8 @@ prog1Project: CMakeFiles/prog1Project.dir/src/Expressions/ExpressionFactory.cpp.
 prog1Project: CMakeFiles/prog1Project.dir/src/Sockets/FlightDataGetterSetter.cpp.o
 prog1Project: CMakeFiles/prog1Project.dir/src/main.cpp.o
 prog1Project: CMakeFiles/prog1Project.dir/src/Interpreter.cpp.o
-prog1Project: CMakeFiles/prog1Project.dir/src/Utils.cpp.o
-prog1Project: CMakeFiles/prog1Project.dir/src/Enviroment.cpp.o
+prog1Project: CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.o
+prog1Project: CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.o
 prog1Project: CMakeFiles/prog1Project.dir/build.make
 prog1Project: CMakeFiles/prog1Project.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable prog1Project"

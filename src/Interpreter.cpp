@@ -1,138 +1,109 @@
 /*
-     created by omri & gal and Gal on 12/9/18.
+     created by Chen
 */
 
 #include "Interpreter.h"
-#include "Databases/ConstsDB.h"
+#include "Databases/Consts.h"
 #include <stack>
 #include <algorithm>
-//#include <bits/refwrap.h>
 #include "Databases/SymbolsDB.h"
 #include "Expressions/ExpressionFactory.h"
-#include "Utils.h"
+#include "Common/Utils.h"
 #include "Expressions/Var.h"
-#include "Exceptions.h"
+#include "Common/Exceptions.h"
 
-/**
- * Shuting yard algortim -
- * get string @expression and return combined work of two functions
- * 1st - turns the infix expression to prefix expression as a vector of tokens (operators and numbers),
- * 2nd- turns the vector into an Expression object.
- *
- * */
-Expression* Interpreter::shuntingYard(vector<string>& tokens) {
 
-    vector<string> postfixVector = shuntingYard_infixToPostfix(tokens);
-
+/*
+ * shuntingYard function
+ * params - an array of words
+ */
+Expression* Interpreter::shuntingYard(vector<string>& words) {
+    vector<string> postfixVector = shuntingYard_infixToPostfix(words);
     // use 2nd function on the result of the 1st.
     return shuntingYard_postfixToExpression(postfixVector);
-
 }
 
-/**
- * shunting yard algorithm - the string to vector of tokens (operators and numbers) part -
- * converts mathematical expression specified in infix notation, into prefix
- * [ for example - 3 * 4 + 5 ---> +(5, *(3, 4))]
+/*
+ * shuntingYard_infixToPostfix function
+ * params - an infix Expressions
  */
-vector<string> Interpreter::shuntingYard_infixToPostfix(vector<string>& tokens) {
-
+vector<string> Interpreter::shuntingYard_infixToPostfix(vector<string>& infixExpression) {
     string prefix;
     vector<string> outputQueue;
     stack<string> operatorsStack;
-
-    // while there is a token to read:
-    std::map<string, int> op_precedence (ExpressionFactory::getOperatorsPrecedence());
-
-
-
-
-    for(string& token: tokens) {
-
-        if (ExpressionFactory::isUnaryOperator(token)) {
-            operatorsStack.push(token);
+    std::map<string, int> operatorPrecedence (ExpressionFactory::getOperatorsPrecedence());
+    // while there is a word to read
+    for(string& word: infixExpression) {
+        if (ExpressionFactory::isUnaryOperator(word)) {
+            operatorsStack.push(word);
         }
-        else if(token == "(")
-            operatorsStack.push(token);
-        else if(token == ")") {
+        else if(word == "(")
+            operatorsStack.push(word);
+        else if(word == ")") {
             while (!operatorsStack.empty() && operatorsStack.top() != "(") {
                 outputQueue.push_back(operatorsStack.top());
                 operatorsStack.pop();
-                //cout << "Pop stack to output " << token << endl;
             }
             if (operatorsStack.size() != 0)
                 operatorsStack.pop();
-            //cout << "Pop stack " << token << endl;
-
-        } else if (ExpressionFactory::isBinaryOperator(token)){
-            while(!operatorsStack.empty() && operatorsStack.top() != "(" && ((op_precedence.at(operatorsStack.top()) > op_precedence.at(token))
-                    || (op_precedence.at(operatorsStack.top()) == op_precedence.at(token) && ExpressionFactory::isLeftAccociative(token)))) {
-                //cout << "Pop stack to output " << token << endl;
+        } else if (ExpressionFactory::isBinaryOperator(word)){
+            while(!operatorsStack.empty() && operatorsStack.top() != "(" && ((operatorPrecedence.at(operatorsStack.top()) > operatorPrecedence.at(word))
+                    || (operatorPrecedence.at(operatorsStack.top()) == operatorPrecedence.at(word) && ExpressionFactory::isLeftAccociative(word)))) {
                 outputQueue.push_back(operatorsStack.top());
                 operatorsStack.pop();
             }
-            operatorsStack.push(token);
-            //cout << "Push " << token << " to stack" << endl;
+            operatorsStack.push(word);
         }
-        // if its a number or variable name or whatever else.
         else {
-            outputQueue.push_back(token);
+            outputQueue.push_back(word);
         }
     }
     while (!operatorsStack.empty()){
         outputQueue.push_back(operatorsStack.top());
-
-        //cout << "Pop stack to output " << operatorsStack.top() << endl;
-
         operatorsStack.pop();
-
     }
-
     return outputQueue;
-
 }
 
 /*
+ * shuntingYard_postfixToExpression function
+ * params - postfixExpression
  * Shunting yard algorithm second part - of our own -
  * turns the vector of tokens exp, and turn it into Expression object.
  * */
-Expression* Interpreter::shuntingYard_postfixToExpression(vector<string>& exp) {
-
-    int n = exp.size();
-
+Expression* Interpreter::shuntingYard_postfixToExpression(vector<string>& postfixExpression) {
+    int n = postfixExpression.size();
     /*
      * else, we can know that the last token in exp is an operator token, so as for what it is
      * we can make the expression, where the right value of it will be starting from exp sub string of
      * n -1, and the left will be at teh sub string of k , where k is the place right expression end at.
      */
-
-    string token = exp[n-1];
-    if(!ExpressionFactory::isNaryOperator(token)) {
+    string word = postfixExpression[n-1];
+    if(!ExpressionFactory::isNaryOperator(word)) {
 
         // if the last token was not an operator,  then we want to just create a Number/varialbe out of it.
-        exp.pop_back();
+        postfixExpression.pop_back();
         double number;
-        if (ExpressionFactory::isNumber(token)) {
-          return new Number(Utils::to_number(token)); // cast from string of number , to int of the number.
+        if (ExpressionFactory::isNumber(word)) {
+          return new Number(Utils::to_number(word)); // cast from string of number , to int of the number.
         }
         // else, it is a variable, so we want to return it.
         else {
 
             // ddddd
-            if (ConstsDB::containsCommand(token)) {
+            if (Consts::containsCommand(word)) {
                 throw SymbolException("Variable with name of language keyword is not allowed");
             }
             // if the variable is a keyword like TRUE, FALSE, we will give it a keyword value by the map.
-            if (ConstsDB::containsKeyword(token)) {
-                return new Number(ConstsDB::getKeywordValue(token));
+            if (Consts::containsKeyword(word)) {
+                return new Number(Consts::getKeywordValue(word));
             }
-            if (!SymbolsDB::containsSymbol(token)) {
-                //TODO
-                if (SymbolsDB::isSourceSymbol(token))
-                    return new Var(token);
-
-                throw SymbolException("no symbol named " + token + " is defined.");
+            if (!SymbolsDB::containsSymbol(word)) {
+                if (SymbolsDB::isSourceSymbol(word))
+                    return new Var(word);
+                throw SymbolException("no symbol named " + word + " is defined.");
             } else {
-                    return new Var(token);
+                    return new Var(word);
             }
         }
 
@@ -141,16 +112,16 @@ Expression* Interpreter::shuntingYard_postfixToExpression(vector<string>& exp) {
         // if last token is operator, as said, we can remove it, and preform the function at the refrenced exp,
         // acutally modifing it, then get the right and left expressions.
 
-        exp.pop_back();
+        postfixExpression.pop_back();
         vector<Expression*> subExpressions;
 
-        for (int i  = 0; i < ExpressionFactory::howManySubExpressions(token); i++) {
-            subExpressions.insert(subExpressions.begin(), shuntingYard_postfixToExpression(exp));
+        for (int i  = 0; i < ExpressionFactory::howManySubExpressions(word); i++) {
+            subExpressions.insert(subExpressions.begin(), shuntingYard_postfixToExpression(postfixExpression));
         }
 
         //create the result from the factory.
 
-        Expression* result = ExpressionFactory::create(token, subExpressions);
+        Expression* result = ExpressionFactory::create(word, subExpressions);
         return result;
 
     }
@@ -225,7 +196,7 @@ void Interpreter::lexer(string& line) {
             if (c == ' ')  {
 
                 // if what came before space was variable (not command) or number, we can have a place to put comma: check.
-                if (tmpNumber!= "" || (tmpVariable != "" && !ConstsDB::containsCommand(tmpVariable))) {
+                if (tmpNumber!= "" || (tmpVariable != "" && !Consts::containsCommand(tmpVariable))) {
 
                     // we go forward to the next letter that is not space:
                     while (line[i] == ' ') {
@@ -360,41 +331,41 @@ void Interpreter::lexer(string& line) {
     addTokenIfStartedNew(tokens, tmpNumber);
     addTokenIfStartedNew(tokens, tmpOperator);
     addTokenIfStartedNew(tokens, tmpVariable);
-    tokens.push_back(ConstsDB::ENDLINE_KEYWORD);
+    tokens.push_back(Consts::ENDLINE_KEYWORD);
 
     // saves the lexed tokens into current args of interpreter.
-    _tokens = tokens;
+    words = tokens;
 }
 
 
 void Interpreter::parser() {
 
     // reset tokens index to 0
-    _index = 0;
+    myIndex = 0;
 
     // if we don't need more lines, mean we staring new command, than we make the needed premake:
     // generate a command from keyword, and gain prev keyword args.
 
-    while (_index < _tokens.size()) {
-        if (!_isNeededMoreLines) {
+    while (myIndex < words.size()) {
+        if (!nextLineNeeded) {
 
             // intilizing args to empty vector.
-            _currentArgs = vector<string>();
+            currentArgs = vector<string>();
 
             // gain vars until a keyword.
-            while (_index < _tokens.size() && !ConstsDB::containsCommand(_tokens[_index])) {
-                _index++;
+            while (myIndex < words.size() && !Consts::containsCommand(words[myIndex])) {
+                myIndex++;
             }
 
             // creates a command by the command keyword.
-            _currentCommand = ConstsDB::createCommand(_tokens[_index], _currentArgs);
+            currentCommand = Consts::createCommand(words[myIndex], currentArgs);
 
             // skip the keyword:
-            _index++;
+            myIndex++;
 
             // substruct _index backwards while the command ask for go back
-            while (_index > 0 && _currentCommand->goBackArg(_tokens[_index])) {
-                _index--;
+            while (myIndex > 0 && currentCommand->goBackArg(words[myIndex])) {
+                myIndex--;
             }
 
 
@@ -406,16 +377,16 @@ void Interpreter::parser() {
         // now we want to read until end of the command args:
 
         bool hungry = false;
-        while (_index < _tokens.size() && (hungry = _currentCommand->anotherArg(_tokens[_index]))) {
+        while (myIndex < words.size() && (hungry = currentCommand->anotherArg(words[myIndex]))) {
 
-            _currentArgs.push_back(_tokens[_index]);
-            _index++;
+            currentArgs.push_back(words[myIndex]);
+            myIndex++;
         }
 
         // if we stop reading because we reached the end of the given input, but the command was hungry for more,
         // we will stop funtion and continue in next call of parse, on the next line.
-        if (_index == _tokens.size() && hungry) {
-            _isNeededMoreLines = true;
+        if (myIndex == words.size() && hungry) {
+            nextLineNeeded = true;
             return;
         }
             // else, we read all line, and we can do the command:
@@ -423,28 +394,28 @@ void Interpreter::parser() {
         else {
 
             // command object do the command on the arguments list.
-            _currentCommand->doCommand();
+            currentCommand->doCommand();
             // adding the command to the stack of commands;
-            _commandsStack.push_back(_currentCommand);
+            commandsStack.push_back(currentCommand);
 
-            _currentCommand = nullptr;
+            currentCommand = nullptr;
 
             // setting that the command arguments is over.
-            _isNeededMoreLines = false;
+            nextLineNeeded = false;
         }
     }
 }
 
 Interpreter::~Interpreter() {
-    delete _currentCommand;
-    for(Command* c:_commandsStack) {
+    delete currentCommand;
+    for(Command* c:commandsStack) {
         delete c;
     }
 
 }
 
 void Interpreter::reset() {
-    _index = 0;
-    _isNeededMoreLines = false;
-    _currentCommand = nullptr;
+    myIndex = 0;
+    nextLineNeeded = false;
+    currentCommand = nullptr;
 }

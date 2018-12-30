@@ -1,5 +1,5 @@
 //
-// created by omri & gal on 12/17/18.
+// created by Chenon 12/17/18.
 //
 
 #ifndef PROG1PROJECT_IfCOMMAND_H

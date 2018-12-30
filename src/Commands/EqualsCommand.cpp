@@ -1,10 +1,10 @@
 //
-// created by omri & gal on 12/18/18.
+// created by Chenon 12/18/18.
 //
 
 #include "EqualsCommand.h"
-#include "../Utils.h"
-#include "../Databases/ConstsDB.h"
+#include "../Common/Utils.h"
+#include "../Databases/Consts.h"
 #include "../Databases/SymbolsDB.h"
 #include "../Interpreter.h"
 
@@ -42,7 +42,7 @@ void EqualsCommand::doCommand() {
 
 bool EqualsCommand::anotherArg(string &current) {
     // get the whole line.
-    return !(current == ConstsDB::ENDLINE_KEYWORD);
+    return !(current == Consts::ENDLINE_KEYWORD);
 }
 
 bool EqualsCommand::goBackArg(string &current) {

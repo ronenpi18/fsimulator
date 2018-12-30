@@ -1,5 +1,5 @@
 //
-// created by omri & gal on 12/10/18.
+// created by Chenon 12/10/18.
 //
 
 #ifndef PROG1PROJECT_Div_H
@@ -7,7 +7,7 @@
 
 
 #include "../BinaryExpression.h"
-#include "../../Exceptions.h"
+#include "../../Common/Exceptions.h"
 
 class Div : public BinaryExpression {
 

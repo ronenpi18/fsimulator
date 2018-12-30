@@ -1,13 +1,13 @@
 //
-// created by omri & gal on 12/24/18.
+// created by Chenon 12/24/18.
 //
 
 #include <unistd.h>
 #include <thread>
 #include <chrono>
 #include "SleepCommand.h"
-#include "../Databases/ConstsDB.h"
-#include "../Utils.h"
+#include "../Databases/Consts.h"
+#include "../Common/Utils.h"
 
 void SleepCommand::doCommand() {
 
@@ -19,7 +19,7 @@ void SleepCommand::doCommand() {
 }
 
 bool SleepCommand::anotherArg(string &current) {
-    return current!=ConstsDB::ENDLINE_KEYWORD;
+    return current!=Consts::ENDLINE_KEYWORD;
 }
 
 bool SleepCommand::goBackArg(string &current) {

@@ -1,5 +1,5 @@
 //
-// created by omri & gal on 12/18/18.
+// created by Chen on 12/18/18.
 //
 
 #ifndef PROG1PROJECT_CONSTSDB_H
@@ -12,7 +12,7 @@
 #include "../Commands/PrintCommand.h"
 #include "../Commands/CommandCreator.h"
 
-class ConstsDB {
+class Consts {
 
 private:
 

@@ -13,11 +13,11 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/ronen/Downloads/prog1Project/src/Commands/PrintCommand.cpp" "/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/src/Commands/PrintCommand.cpp.o"
   "/Users/ronen/Downloads/prog1Project/src/Commands/SleepCommand.cpp" "/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/src/Commands/SleepCommand.cpp.o"
   "/Users/ronen/Downloads/prog1Project/src/Commands/WhileCommand.cpp" "/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/src/Commands/WhileCommand.cpp.o"
-  "/Users/ronen/Downloads/prog1Project/src/Enviroment.cpp" "/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/src/Enviroment.cpp.o"
+  "/Users/ronen/Downloads/prog1Project/src/Common/EnvironmentVar.cpp" "/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/src/Common/EnvironmentVar.cpp.o"
+  "/Users/ronen/Downloads/prog1Project/src/Common/Utils.cpp" "/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/src/Common/Utils.cpp.o"
   "/Users/ronen/Downloads/prog1Project/src/Expressions/ExpressionFactory.cpp" "/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/src/Expressions/ExpressionFactory.cpp.o"
   "/Users/ronen/Downloads/prog1Project/src/Interpreter.cpp" "/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/src/Interpreter.cpp.o"
   "/Users/ronen/Downloads/prog1Project/src/Sockets/FlightDataGetterSetter.cpp" "/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/src/Sockets/FlightDataGetterSetter.cpp.o"
-  "/Users/ronen/Downloads/prog1Project/src/Utils.cpp" "/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/src/Utils.cpp.o"
   "/Users/ronen/Downloads/prog1Project/src/main.cpp" "/Users/ronen/Downloads/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

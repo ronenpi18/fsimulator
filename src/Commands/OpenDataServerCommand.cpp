@@ -4,9 +4,9 @@
 
 #include "OpenDataServerCommand.h"
 #include <stdexcept>
-#include "../Utils.h"
+#include "../Common/Utils.h"
 #include "../Databases/SymbolsDB.h"
-#include "../Databases/ConstsDB.h"
+#include "../Databases/Consts.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <netdb.h>
@@ -213,7 +213,7 @@ void OpenDataServerCommand::task(int frequency) {
 bool OpenDataServerCommand::anotherArg(string &current) {
 
     // get until end of line.
-    return current != ConstsDB::ENDLINE_KEYWORD;
+    return current != Consts::ENDLINE_KEYWORD;
 }
 
 bool OpenDataServerCommand::goBackArg(string &current) {

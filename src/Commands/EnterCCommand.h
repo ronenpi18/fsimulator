@@ -1,5 +1,5 @@
 //
-// created by omri & gal on 12/18/18.
+// created by Chenon 12/18/18.
 //
 
 #ifndef PROG1PROJECT_ENTERCCOMMAND

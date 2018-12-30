@@ -149,10 +149,16 @@
 		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Commands/WhileCommand.h">
 			<Option target="prog1Project"/>
 		</Unit>
-		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Enviroment.cpp">
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Common/EnvironmentVar.cpp">
 			<Option target="prog1Project"/>
 		</Unit>
-		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Enviroment.h">
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Common/EnvironmentVar.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Common/Utils.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Common/Utils.h">
 			<Option target="prog1Project"/>
 		</Unit>
 		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Expression.h">
@@ -216,15 +222,6 @@
 			<Option target="prog1Project"/>
 		</Unit>
 		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Sockets/FlightDataGetterSetter.h">
-			<Option target="prog1Project"/>
-		</Unit>
-		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Symbol.h">
-			<Option target="prog1Project"/>
-		</Unit>
-		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Utils.cpp">
-			<Option target="prog1Project"/>
-		</Unit>
-		<Unit filename="/Users/ronen/Downloads/prog1Project/src/Utils.h">
 			<Option target="prog1Project"/>
 		</Unit>
 		<Unit filename="/Users/ronen/Downloads/prog1Project/src/main.cpp">

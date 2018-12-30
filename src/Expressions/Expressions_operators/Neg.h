@@ -1,5 +1,5 @@
 //
-// created by omri & gal on 12/21/18.
+// created by Chenon 12/21/18.
 //
 
 #ifndef PROG1PROJECT_NEG_H

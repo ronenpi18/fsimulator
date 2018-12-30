@@ -14,30 +14,29 @@ using namespace std;;
 #include <stdio.h>
 #include <limits.h>
 #include "Databases/SymbolsDB.h"
-#include "Enviroment.h"
-#include "Utils.h"
+#include "Common/EnvironmentVar.h"
+#include "Common/Utils.h"
 
 int main(int argc, char *argv[]) {
 
-    Enviroment *e = new Enviroment;
+    EnvironmentVar *pVar = new EnvironmentVar;
     try {
 
         // by if the user inserted a filename or not, do the right operation.
         if (argc <= 1) {
-            e->CommandlineOperation();
+            pVar->TetminalController();
 
         }
 
         else {
             string fileName = string(argv[1]);
-            e->runScriptFromFile(fileName);
+            pVar->fileRunner(fileName);
         }
-        delete e;
+        delete pVar;
         exit(0);
     } catch (...)  {
-        delete e;
+        cout << "There was a problem in the Main function" << endl;
+        delete pVar;
         exit(1);
     }
-
-
 }

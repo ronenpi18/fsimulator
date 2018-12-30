@@ -1,5 +1,5 @@
 //
-// created by omri & gal on 12/24/18.
+// created by Chenon 12/24/18.
 //
 
 #ifndef PROG1PROJECT_CREATORS_H

@@ -4,9 +4,9 @@
 
 #include "PrintCommand.h"
 #include "../Interpreter.h"
-#include "../Utils.h"
+#include "../Common/Utils.h"
 #include "../Databases/SymbolsDB.h"
-#include "../Databases/ConstsDB.h"
+#include "../Databases/Consts.h"
 
 void PrintCommand::doCommand() {
     string toPrint = args[0];
@@ -45,6 +45,6 @@ bool PrintCommand::goBackArg(string &current) {
 bool PrintCommand::anotherArg(string &current) {
 
     // get until end of line.
-    return current != ConstsDB::ENDLINE_KEYWORD;
+    return current != Consts::ENDLINE_KEYWORD;
 
 }
